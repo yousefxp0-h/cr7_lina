@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تشغيل فيديو بالصوت تلقائيًا</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: black;
+        }
+
+        video {
+            width: auto;
+            height: 100vh;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الفيديو -->
+    <video id="introVideo" autoplay playsinline controls>
+        <source src="video_2024-10-25_03-30-09.mp4" type="video/mp4">
+        <source src="video.webm" type="video/webm">
+        متصفحك لا يدعم تشغيل الفيديو.
+    </video>
+
+    <script>
+        const redirectURL = "https://example.com";
+
+        const video = document.getElementById("introVideo");
+        video.onended = function() {
+            window.location.href = redirectURL;
+        };
+    </script>
+
+</body>
+</html>
